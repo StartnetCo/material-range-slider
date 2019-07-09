@@ -544,5 +544,5 @@
     "_MatSlidefMixinBase": "./slidef",
     "MatSlidef": "./slidef"
   },
-  "importAs": "src/slidef"
+  "importAs": "material-angular-range-slider"
 }

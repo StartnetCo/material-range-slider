@@ -1,5 +1,6 @@
 {
-    "name": "@angular/material/slidef",
+    "name": "material-angular-range-slider",
     "typings": "./slidef.d.ts",
-    "main": "./mymaterial-slidef.umd.js"
+    "main": "./mymaterial-slidef.umd.js",
+    "version": "1.0.1"
 }
