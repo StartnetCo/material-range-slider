@@ -2323,7 +2323,7 @@
       set: function(v) {
         if (v !== this._value) {
           this._value = coercion.coerceNumberProperty(v, this._value || 0);
-          if (this.values != null) {
+          if (this.values != null && this.values) {
             this.values.range_end = this._value;
             // this.values.range_start = this._value.range_start;
           }
@@ -2348,7 +2348,7 @@
 
       get: function() {
         // If the value needs to be read and it is still uninitialized, initialize it to the min.
-        if (this._value2 === null) {
+        if (this._value2 === null && this.values) {
           this.value2 = this.values.range_end;
         }
         return this._value2;
@@ -2360,7 +2360,7 @@
       set: function(v) {
         if (v !== this._value2) {
           this._value2 = coercion.coerceNumberProperty(v, this._value2 || 0);
-          if (this.values != null) {
+          if (this.values != null && this.values) {
             this.values.range_start = this._value2;
             // console.log("start value change111")
             this._emitChangeEvent();
@@ -2385,7 +2385,7 @@
 
       get: function() {
         // If the value needs to be read and it is still uninitialized, initialize it to the min.
-        if (this._startRange === null) {
+        if (this._startRange === null && this.values) {
           this.startRange = this.values.range_end;
         }
         return this.values.range_start;
